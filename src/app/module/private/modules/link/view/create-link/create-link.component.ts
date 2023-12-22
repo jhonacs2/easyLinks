@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'el-create-link',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './create-link.component.scss'
 })
 export class CreateLinkComponent {
-
+  constructor() {
+  }
 }
