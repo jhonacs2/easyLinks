@@ -1,0 +1,42 @@
+.el-create-link {
+  display: flex;
+  gap: 2.4rem;
+
+  &__phone,
+  &__customize {
+    background: var(--white);
+    border-radius: 1.2rem;
+  }
+
+  &__phone {
+    width: 30%;
+    padding: 2.4rem;
+  }
+
+  &__customize {
+    width: 70%;
+    padding: 4rem;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 4rem;
+
+      &-heading {
+        font-size: 3.2rem;
+        font-weight: 700;
+      }
+
+      &-info {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--text-color-grey);
+      }
+    }
+
+    &-new-link {
+      width: 100%;
+    }
+  }
+}
