@@ -3,7 +3,6 @@
 @import "./assets/styles/style";
 
 :root {
-  --body-color: #FAFAFA;
   --body-font: 'Instrument Sans', sans-serif;
   --normal-font-size: 62.5%;
 }
@@ -14,4 +13,6 @@ html {
 
 body {
   font-family: var(--body-font);
+  background: var(--body-background);
+  padding: 2.4rem;
 }
