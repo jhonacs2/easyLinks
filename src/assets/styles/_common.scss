@@ -2,3 +2,44 @@
 .el-button {
 
 }
+
+/*CONTAINER*/
+.el-container {
+  max-width: 139.2rem;
+}
+
+.el-container__header {
+  padding: 2.4rem;
+}
+
+/*TABS*/
+.el-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+.el-nav__logo {
+
+}
+
+.el-nav__menu {
+
+}
+
+.el-nav__link {
+  color: var(--text-color-grey);
+  padding: 1.1rem 2.7rem;
+  font-weight: 600;
+
+  &--active {
+    border-radius: 8px;
+    background: var(--first-color-alt);
+    color: var(--first-color);
+  }
+
+  &:hover {
+    color: var(--first-color);
+  }
+}

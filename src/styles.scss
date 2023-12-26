@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap');
-@import "./assets/styles/reset";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+@import "./assets/styles/style";
 
 :root {
   --body-color: #FAFAFA;
   --body-font: 'Instrument Sans', sans-serif;
-  --normal-font-size: .625rem;
+  --normal-font-size: 62.5%;
+}
+
+html {
+  font-size: var(--normal-font-size);
 }
 
 body {
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
 }
