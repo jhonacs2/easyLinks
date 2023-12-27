@@ -13,15 +13,17 @@
     padding: 2.4rem;
   }
 
+  &__main-links {
+    padding: 4rem;
+  }
+
   &__customize {
     width: 70%;
-    padding: 4rem;
 
     &-content {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
-      margin-bottom: 4rem;
 
       &-heading {
         font-size: 3.2rem;
@@ -37,6 +39,29 @@
 
     &-new-link {
       width: 100%;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__create-links {
+    figure {
+      border-radius: 1.2rem;
+      background-color: var(--body-background);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 2.4rem 4rem;
+      border-top: 2px solid var(--gray);
+
+      &__button {
+      }
     }
   }
 }
