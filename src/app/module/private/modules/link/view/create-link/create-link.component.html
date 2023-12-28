@@ -13,10 +13,26 @@
         <button class="el-button-sec el-create-link__customize-new-link">+ Add new link</button>
       </div>
 
-      <div class="el-create-link__create-links">
-        <figure>
-          <img src="assets/images/illustration-empty.svg" alt="create-link-empty">
-        </figure>
+      <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
+        @for (link of links;track link) {
+          <div class="el-create-link__create-links-link" style="height: 100px" cdkDrag>
+            <div class="el-create-link__create-links-link__header">
+              <label>Link #1</label>
+              <label>Remove</label>
+            </div>
+
+            <div class="el-create-link__create-links-link__body">
+              <div class="el-flex el-flex-col">
+                <label for="Platform">Platform</label>
+                <input type="text" id="Platform">
+              </div>
+            </div>
+          </div>
+        }
+        <!--<figure>
+          <img src=" assets
+            /images/illustration-empty.svg" alt="create-link-empty">
+            </figure>-->
       </div>
     </div>
 
