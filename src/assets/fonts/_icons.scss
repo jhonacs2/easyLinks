@@ -1,0 +1,204 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('./fonts/#{$icomoon-font-family}.eot');
+  src: url('./fonts/#{$icomoon-font-family}.eot?vey4yx#iefix') format('embedded-opentype'),
+  url('./fonts/#{$icomoon-font-family}.ttf?vey4yx') format('truetype'),
+  url('./fonts/#{$icomoon-font-family}.woff?vey4yx') format('woff'),
+  url('./fonts/#{$icomoon-font-family}.svg?vey4yx##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+[class^="el-link-"], [class*=" el-link-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-link-icon-changes-saved .path1 {
+  &:before {
+    content: $el-link-icon-changes-saved-path1;
+    color: rgb(255, 255, 255);
+  }
+}
+.el-link-icon-changes-saved .path2 {
+  &:before {
+    content: $el-link-icon-changes-saved-path2;
+    margin-left: -1em;
+    color: rgb(115, 115, 115);
+  }
+}
+.el-link-icon-chevron-down {
+  &:before {
+    content: $el-link-icon-chevron-down;
+  }
+}
+.el-link-icon-codepen {
+  &:before {
+    content: $el-link-icon-codepen;
+    color: #737373;
+  }
+}
+.el-link-icon-codewars {
+  &:before {
+    content: $el-link-icon-codewars;
+    color: #737373;
+  }
+}
+.el-link-icon-devto .path1 {
+  &:before {
+    content: $el-link-icon-devto-path1;
+    color: rgb(115, 115, 115);
+  }
+}
+.el-link-icon-devto .path2 {
+  &:before {
+    content: $el-link-icon-devto-path2;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.el-link-icon-devto .path3 {
+  &:before {
+    content: $el-link-icon-devto-path3;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.el-link-icon-drag-and-drop {
+  &:before {
+    content: $el-link-icon-drag-and-drop;
+    color: #737373;
+  }
+}
+.el-link-icon-email {
+  &:before {
+    content: $el-link-icon-email;
+    color: #737373;
+  }
+}
+.el-link-icon-facebook {
+  &:before {
+    content: $el-link-icon-facebook;
+    color: #737373;
+  }
+}
+.el-link-icon-frontend-mentor {
+  &:before {
+    content: $el-link-icon-frontend-mentor;
+    color: #737373;
+  }
+}
+.el-link-icon-github {
+  &:before {
+    content: $el-link-icon-github;
+    color: #737373;
+  }
+}
+.el-link-icon-gitlab {
+  &:before {
+    content: $el-link-icon-gitlab;
+    color: #737373;
+  }
+}
+.el-link-icon-link-copied-to-clipboard {
+  &:before {
+    content: $el-link-icon-link-copied-to-clipboard;
+    color: #737373;
+  }
+}
+.el-link-icon-links-header {
+  &:before {
+    content: $el-link-icon-links-header;
+    color: #737373;
+  }
+}
+.el-link-icon-password {
+  &:before {
+    content: $el-link-icon-password;
+    color: #737373;
+  }
+}
+.el-link-icon-profile-details-header {
+  &:before {
+    content: $el-link-icon-profile-details-header;
+    color: #737373;
+  }
+}
+.el-link-icon-stack-overflow {
+  &:before {
+    content: $el-link-icon-stack-overflow;
+    color: #737373;
+  }
+}
+.el-link-icon-twitch {
+  &:before {
+    content: $el-link-icon-twitch;
+    color: #737373;
+  }
+}
+.el-link-icon-twitter {
+  &:before {
+    content: $el-link-icon-twitter;
+    color: #737373;
+  }
+}
+.el-link-icon-upload-image {
+  &:before {
+    content: $el-link-icon-upload-image;
+  }
+}
+.el-link-icon-youtube {
+  &:before {
+    content: $el-link-icon-youtube;
+    color: #737373;
+  }
+}
+.el-link-icon-arrow-right {
+  &:before {
+    content: $el-link-icon-arrow-right;
+    color: #fff;
+  }
+}
+.el-link-icon-freecodecamp {
+  &:before {
+    content: $el-link-icon-freecodecamp;
+    color: #737373;
+  }
+}
+.el-link-icon-hashnode {
+  &:before {
+    content: $el-link-icon-hashnode;
+    color: #737373;
+  }
+}
+.el-link-icon-link {
+  &:before {
+    content: $el-link-icon-link;
+    color: #737373;
+  }
+}
+.el-link-icon-linkedin {
+  &:before {
+    content: $el-link-icon-linkedin;
+    color: #737373;
+  }
+}
+.el-link-icon-preview-header {
+  &:before {
+    content: $el-link-icon-preview-header;
+  }
+}
