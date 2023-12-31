@@ -10,7 +10,7 @@ export class CreateLinkComponent {
   public links: string[] = [];
 
   constructor() {
-    this.links = ['YOUTUBE', 'TWITCH'];
+    this.links = ['YOUTUBE'];
   }
 
   drop(event: CdkDragDrop<string[]>) {

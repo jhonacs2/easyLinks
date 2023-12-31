@@ -15,16 +15,16 @@
 
       <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
         @for (link of links;track link) {
-          <div class="el-create-link__create-links-link" style="height: 100px" cdkDrag>
+          <div class="el-create-link__create-links-link"cdkDrag>
             <div class="el-create-link__create-links-link__header">
               <label><span class="el-link-icon-drag-and-drop"></span>Link #1</label>
               <label>Remove</label>
             </div>
 
             <div class="el-create-link__create-links-link__body">
-              <div class="el-flex el-flex-col">
-                <label for="Platform">Platform</label>
-                <input type="text" id="Platform">
+              <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
+                <label>Platform</label>
+                <el-drop-down></el-drop-down>
               </div>
             </div>
           </div>

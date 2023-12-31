@@ -1,0 +1,36 @@
+<div class="el-custom-select-container" #selector>
+  <button
+    class="el-custom-select-container__button"
+    role="combobox"
+    aria-labelledby="select button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls="select-dropdown"
+    (click)="toggleDropDown()"
+    #buttonSelect>
+    <label class="el-custom-select-container__selected-text">
+      <span class="{{optionSelected.icon}}"></span>
+
+      <span class="el-custom-select-container__selected-value">{{optionSelected.text}}</span>
+    </label>
+
+    <span class="el-custom-select-container__arrow"></span>
+  </button>
+
+  <ul class="el-custom-select-container__dropdown" role="listbox" id="select-dropdown">
+    @for (option of options;track option) {
+      <li role="option">
+        <input type="radio"
+               id="{{option.text}}"
+               name="social-account"
+               value="{{option.text}}"
+               (change)="onChange($event)"
+        />
+
+        <span class="{{option.icon}}"></span>
+
+        <label for="{{option.text}}">{{ option.text }}</label>
+      </li>
+    }
+  </ul>
+</div>

@@ -49,7 +49,6 @@
     gap: 1.2rem;
 
     &-link {
-
       &__header {
         display: flex;
         justify-content: space-between;
@@ -66,7 +65,17 @@
       }
 
       &__body {
+        &-link-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
 
+          label {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-color-black);
+          }
+        }
       }
 
       display: flex;
