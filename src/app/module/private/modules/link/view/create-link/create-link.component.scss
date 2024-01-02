@@ -65,6 +65,10 @@
       }
 
       &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
         &-link-container {
           display: flex;
           flex-direction: column;
@@ -107,6 +111,12 @@
 
       &__button {
       }
+    }
+  }
+
+  &__input-link-container {
+    input {
+      width: 100%;
     }
   }
 }

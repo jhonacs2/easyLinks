@@ -18,13 +18,20 @@
           <div class="el-create-link__create-links-link"cdkDrag>
             <div class="el-create-link__create-links-link__header">
               <label><span class="el-link-icon-drag-and-drop"></span>Link #1</label>
-              <label>Remove</label>
+              <label class="el-fw-400">Remove</label>
             </div>
 
             <div class="el-create-link__create-links-link__body">
               <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
                 <label>Platform</label>
                 <el-drop-down></el-drop-down>
+              </div>
+
+              <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
+                <label>Link</label>
+                <div class="el-create-link__input-link-container">
+                  <input type="text" class="el-input">
+                </div>
               </div>
             </div>
           </div>
