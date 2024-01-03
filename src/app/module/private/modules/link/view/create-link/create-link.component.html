@@ -10,36 +10,39 @@
           profiles
           with the world!</label>
 
-        <button class="el-button-sec el-create-link__customize-new-link">+ Add new link</button>
+        <button class="el-button-sec el-create-link__customize-new-link" (click)="addLink()">+ Add new link</button>
       </div>
 
       <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
-        @for (link of links;track link) {
-          <div class="el-create-link__create-links-link"cdkDrag>
-            <div class="el-create-link__create-links-link__header">
-              <label><span class="el-link-icon-drag-and-drop"></span>Link #1</label>
-              <label class="el-fw-400">Remove</label>
-            </div>
-
-            <div class="el-create-link__create-links-link__body">
-              <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
-                <label>Platform</label>
-                <el-drop-down></el-drop-down>
+        @if (links.length > 0) {
+          @for (link of links;track link;let index = $index) {
+            <div class="el-create-link__create-links-link" cdkDrag>
+              <div class="el-create-link__create-links-link__header">
+                <label><span class="el-link-icon-drag-and-drop"></span>Link #{{ index + 1 }}</label>
+                <label class="el-fw-400">Remove</label>
               </div>
 
-              <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
-                <label>Link</label>
-                <div class="el-create-link__input-link-container">
-                  <input type="text" class="el-input">
+              <div class="el-create-link__create-links-link__body">
+                <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
+                  <label>Platform</label>
+                  <el-drop-down [options]="linkOptions"></el-drop-down>
+                </div>
+
+                <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
+                  <label>Link</label>
+                  <div class="el-create-link__input-link-container">
+                    <input type="text" class="el-input">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          }
+        } @else {
+          <figure>
+            <img src="assets/images/illustration-empty.svg" alt="create-link-empty">
+          </figure>
         }
-        <!--<figure>
-          <img src=" assets
-            /images/illustration-empty.svg" alt="create-link-empty">
-            </figure>-->
+
       </div>
     </div>
 
