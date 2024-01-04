@@ -19,4 +19,7 @@ body {
   font-family: var(--body-font);
   background: var(--body-background);
   padding: 2.4rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
 }

@@ -4,6 +4,9 @@
 
   &__phone,
   &__customize {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--white);
     border-radius: 1.2rem;
   }
@@ -14,6 +17,7 @@
   }
 
   &__main-links {
+    overflow-y: auto;
     padding: 4rem;
   }
 
