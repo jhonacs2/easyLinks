@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
+import {LinkDetail} from '../../../interfaces/link-detail.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LinkService {
   private _options: { icon: string, text: string }[];
-  private _links: { text: string, url: '' }[];
+  private _links: LinkDetail[];
 
   constructor() {
     this._links = [];
@@ -35,11 +36,20 @@ export class LinkService {
     this._options = value;
   }
 
-  get links(): { text: string; url: '' }[] {
+  get links(): LinkDetail[] {
     return this._links;
   }
 
-  addLink(link: { text: string, url: '' }): void {
+  addLink(link: LinkDetail): void {
+    link.text = Math.floor(Math.random() * 20).toString();
     this._links.push(link);
+  }
+
+  changeOrderLinks(links: LinkDetail[]): void {
+    this._links = links;
+  }
+
+  updateLink(text: string, index: number): void {
+    this._links[index].text = text;
   }
 }

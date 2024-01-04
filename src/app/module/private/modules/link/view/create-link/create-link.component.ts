@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import {LinkService} from '../../services/link.service';
+import {LinkDetail} from '../../../../interfaces/link-detail.interface';
 
 @Component({
   selector: 'el-create-link',
@@ -8,7 +9,7 @@ import {LinkService} from '../../services/link.service';
   styleUrl: './create-link.component.scss'
 })
 export class CreateLinkComponent implements OnInit {
-  public links: { text: string; url: '' }[];
+  public links: LinkDetail[];
   public linkOptions: { icon: string; text: string }[];
 
   constructor(private _linkService: LinkService) {
@@ -23,9 +24,14 @@ export class CreateLinkComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>): void {
     moveItemInArray(this.links, event.previousIndex, event.currentIndex);
+    this._linkService.changeOrderLinks(this.links);
   }
 
   addLink(): void {
-    this.links.push({text: '', url: ''});
+    this._linkService.addLink({text: '', url: ''});
+  }
+
+  updateLinks(inputLink: HTMLInputElement, index: number): void {
+    this._linkService.updateLink(inputLink.value, index);
   }
 }

@@ -15,7 +15,7 @@
 
       <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
         @if (links.length > 0) {
-          @for (link of links;track link;let index = $index) {
+          @for (link of links; track link; let index = $index) {
             <div class="el-create-link__create-links-link" cdkDrag>
               <div class="el-create-link__create-links-link__header">
                 <label><span class="el-link-icon-drag-and-drop"></span>Link #{{ index + 1 }}</label>
@@ -31,7 +31,7 @@
                 <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
                   <label>Link</label>
                   <div class="el-create-link__input-link-container">
-                    <input type="text" class="el-input">
+                    <input type="text" class="el-input" (input)="updateLinks(inputLink,index)" #inputLink>
                   </div>
                 </div>
               </div>
