@@ -34,4 +34,8 @@ export class CreateLinkComponent implements OnInit {
   updateLinks(inputLink: HTMLInputElement, index: number): void {
     this._linkService.updateLink(inputLink.value, index);
   }
+
+  removeLink(index: number): void {
+    this._linkService.deleteLink(index);
+  }
 }

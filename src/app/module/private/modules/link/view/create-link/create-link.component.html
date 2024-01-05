@@ -19,7 +19,7 @@
             <div class="el-create-link__create-links-link" cdkDrag>
               <div class="el-create-link__create-links-link__header">
                 <label><span class="el-link-icon-drag-and-drop"></span>Link #{{ index + 1 }}</label>
-                <label class="el-fw-400">Remove</label>
+                <button class="el-fw-400" (click)="removeLink(index)">Remove</button>
               </div>
 
               <div class="el-create-link__create-links-link__body">

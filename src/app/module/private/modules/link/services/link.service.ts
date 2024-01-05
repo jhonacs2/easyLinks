@@ -52,4 +52,8 @@ export class LinkService {
   updateLink(text: string, index: number): void {
     this._links[index].text = text;
   }
+
+  deleteLink(index: number): void {
+    this._links.splice(index, 1);
+  }
 }
