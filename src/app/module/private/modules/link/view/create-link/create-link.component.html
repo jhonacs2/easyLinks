@@ -13,8 +13,8 @@
         <button class="el-button-sec el-create-link__customize-new-link" (click)="addLink()">+ Add new link</button>
       </div>
 
-      <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
-        @if (links.length > 0) {
+      @if (links.length > 0) {
+        <div class="el-create-link__create-links" cdkDropList (cdkDropListDropped)="drop($event)">
           @for (link of links; track link; let index = $index) {
             <div class="el-create-link__create-links-link" cdkDrag>
               <div class="el-create-link__create-links-link__header">
@@ -37,13 +37,13 @@
               </div>
             </div>
           }
-        } @else {
-          <figure>
-            <img src="assets/images/illustration-empty.svg" alt="create-link-empty">
-          </figure>
-        }
+        </div>
+      } @else {
+        <div class="el-h-100 el-create-link__empty-link">
+          <img src="assets/images/illustration-empty.svg" alt="create-link-empty" style="height: 100%">
+        </div>
+      }
 
-      </div>
     </div>
 
     <div class="el-create-link__create-links-footer">
