@@ -11,20 +11,22 @@
     <label class="el-custom-select-container__selected-text">
       <span class="{{optionSelected.icon}}"></span>
 
-      <span class="el-custom-select-container__selected-value">{{optionSelected.text}}</span>
+      <span class="el-custom-select-container__selected-value">{{ optionSelected.text }}</span>
     </label>
 
     <span class="el-custom-select-container__arrow"></span>
   </button>
 
   <ul class="el-custom-select-container__dropdown" role="listbox" id="select-dropdown">
-    @for (option of options;track option) {
+    @for (option of options; track option; let idx = $index) {
       <li role="option">
         <input type="radio"
-               id="{{option.text}}"
                name="social-account"
                value="{{option.text}}"
-               (change)="onChange($event)"
+               [(ngModel)]="value"
+               [ngModelOptions]="{standalone: true}"
+               (change)="changeFn(option)"
+               (blur)="onBlur()"
         />
 
         <span class="{{option.icon}}"></span>

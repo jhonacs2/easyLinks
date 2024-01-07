@@ -5,6 +5,7 @@ import {LinkRoutingModule} from './routes/link-routing.module';
 import {MainLinkViewComponent} from './view/main-link-view/main-link-view.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {DropDownComponent} from '../../../../components/drop-down/drop-down.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -12,13 +13,14 @@ import {DropDownComponent} from '../../../../components/drop-down/drop-down.comp
     CreateLinkComponent,
     MainLinkViewComponent
   ],
-  imports: [
-    CommonModule,
-    LinkRoutingModule,
-    NgOptimizedImage,
-    DragDropModule,
-    DropDownComponent
-  ]
+    imports: [
+        CommonModule,
+        LinkRoutingModule,
+        NgOptimizedImage,
+        DragDropModule,
+        DropDownComponent,
+        FormsModule
+    ]
 })
 export class LinkModule {
 }

@@ -38,7 +38,11 @@
               <div class="el-create-link__create-links-link__body">
                 <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">
                   <label>Platform</label>
-                  <el-drop-down [options]="linkOptions"></el-drop-down>
+                  <el-drop-down
+                    [options]="linkOptions"
+                    [(ngModel)]="selected"
+                    (ngModelChange)="dropDownChange(index)">
+                  </el-drop-down>
                 </div>
 
                 <div class="el-flex el-flex-col el-create-link__create-links-link__body-link-container">

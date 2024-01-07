@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import {LinkService} from '../../services/link.service';
 import {LinkDetail} from '../../../../interfaces/link-detail.interface';
+import {Option} from '../../../../interfaces/option.interface';
 
 @Component({
   selector: 'el-create-link',
@@ -9,12 +10,14 @@ import {LinkDetail} from '../../../../interfaces/link-detail.interface';
   styleUrl: './create-link.component.scss'
 })
 export class CreateLinkComponent implements OnInit {
-  public links: LinkDetail[];
-  public linkOptions: { icon: string; text: string }[];
+  links: LinkDetail[];
+  linkOptions: { icon: string; text: string }[];
+  selected: Option;
 
   constructor(private _linkService: LinkService) {
     this.links = [];
     this.linkOptions = [];
+    this.selected = {icon: '', text: ''};
   }
 
   ngOnInit(): void {
@@ -37,5 +40,9 @@ export class CreateLinkComponent implements OnInit {
 
   removeLink(index: number): void {
     this._linkService.deleteLink(index);
+  }
+
+  dropDownChange(index: number) {
+    // TODO: Update service links
   }
 }
