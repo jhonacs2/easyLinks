@@ -5,7 +5,7 @@ import {LinkDetail} from '../../../interfaces/link-detail.interface';
   providedIn: 'root'
 })
 export class LinkService {
-  private _options: { icon: string, text: string }[];
+  private _options: { icon: string, text: string, background?: string }[];
   private _links: LinkDetail[];
 
   constructor() {
@@ -41,7 +41,6 @@ export class LinkService {
   }
 
   addLink(link: LinkDetail): void {
-    link.text = Math.floor(Math.random() * 20).toString();
     this._links.push(link);
   }
 
@@ -49,7 +48,11 @@ export class LinkService {
     this._links = links;
   }
 
-  updateLink(text: string, index: number): void {
+  updateLinkUrl(url: string, index: number): void {
+    this._links[index].url = url;
+  }
+
+  updateLinkText(text: string, index: number): void {
     this._links[index].text = text;
   }
 

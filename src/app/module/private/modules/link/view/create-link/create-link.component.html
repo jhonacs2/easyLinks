@@ -4,12 +4,9 @@
       <img src="assets/images/illustration-phone-mockup.svg" alt="illustration phone mockup">
 
       <div class="el-create-link__phone-links-container">
-        <!--TODO: Add background color       -->
-        <!-- <div class="el-create-link__phone-links">Github</div>
-
-        <div class="el-create-link__phone-links">Github</div>
-
-        <div class="el-create-link__phone-links">Github</div>-->
+        @for (phoneLink of links; track phoneLink) {
+          <div class="el-create-link__phone-links">{{ phoneLink.text }}</div>
+        }
       </div>
     </figure>
   </div>
@@ -57,7 +54,7 @@
         </div>
       } @else {
         <div class="el-h-100 el-create-link__empty-link">
-          <img src="assets/images/illustration-empty.svg" alt="create-link-empty" style="height: 100%">
+          <img src="assets/images/illustration-empty.svg" alt="create-link-empty" class="el-h-100">
         </div>
       }
 

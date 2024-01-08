@@ -12,12 +12,12 @@ import {Option} from '../../../../interfaces/option.interface';
 export class CreateLinkComponent implements OnInit {
   links: LinkDetail[];
   linkOptions: { icon: string; text: string }[];
-  selected: Option;
+  selected: string;
 
   constructor(private _linkService: LinkService) {
     this.links = [];
     this.linkOptions = [];
-    this.selected = {icon: '', text: ''};
+    this.selected = '';
   }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class CreateLinkComponent implements OnInit {
   }
 
   updateLinks(inputLink: HTMLInputElement, index: number): void {
-    this._linkService.updateLink(inputLink.value, index);
+    this._linkService.updateLinkUrl(inputLink.value, index);
   }
 
   removeLink(index: number): void {
@@ -43,6 +43,6 @@ export class CreateLinkComponent implements OnInit {
   }
 
   dropDownChange(index: number) {
-    // TODO: Update service links
+    this._linkService.updateLinkText(this.selected, index);
   }
 }
