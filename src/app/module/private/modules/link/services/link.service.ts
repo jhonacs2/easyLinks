@@ -71,13 +71,13 @@ export class LinkService {
 
   updateLinkUrl(url: string, index: number): void {
     this._links[index].url = url;
-    this._phoneLinks[index] = {...this._links[index], url: url};
+    this._phoneLinks[index] = {...this._phoneLinks[index], url: url};
   }
 
   updateLinkText(text: string, index: number): void {
     this._links[index].text = text;
     this._phoneLinks[index] = {
-      ...this._links[index],
+      ...this._phoneLinks[index],
       text: text,
       background: this.optionMap.get(text)?.background,
       icon: this.optionMap.get(text)?.icon

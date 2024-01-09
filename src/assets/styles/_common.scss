@@ -61,6 +61,7 @@
   color: var(--text-color-grey);
   padding: 1.1rem 2.7rem;
   font-weight: 600;
+  text-decoration: none;
 
   &--active {
     border-radius: 8px;
@@ -80,6 +81,10 @@
   &-col {
     flex-direction: column;
   }
+}
+
+.el-flex-gap-1 {
+  gap: 0.8rem;
 }
 
 /*FONT*/

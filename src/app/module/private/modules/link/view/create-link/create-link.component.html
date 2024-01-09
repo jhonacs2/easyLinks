@@ -7,7 +7,10 @@
         @for (phoneLink of phoneLinks | slice:0:5; track phoneLink) {
           <div class="el-create-link__phone-links el-fw-400"
                [style.background-color]="phoneLink.background">
-            <label>{{ phoneLink.text }}</label>
+            <div class="el-flex el-flex-gap-1">
+              <span class="{{phoneLink.icon}}"></span>
+              <label>{{ phoneLink.text }}</label>
+            </div>
             <span class="el-link-icon-arrow-right"></span>
           </div>
         }
