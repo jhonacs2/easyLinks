@@ -4,8 +4,12 @@
       <img src="assets/images/illustration-phone-mockup.svg" alt="illustration phone mockup">
 
       <div class="el-create-link__phone-links-container">
-        @for (phoneLink of links; track phoneLink) {
-          <div class="el-create-link__phone-links">{{ phoneLink.text }}</div>
+        @for (phoneLink of phoneLinks | slice:0:5; track phoneLink) {
+          <div class="el-create-link__phone-links el-fw-400"
+               [style.background-color]="phoneLink.background">
+            <label>{{ phoneLink.text }}</label>
+            <span class="el-link-icon-arrow-right"></span>
+          </div>
         }
       </div>
     </figure>
