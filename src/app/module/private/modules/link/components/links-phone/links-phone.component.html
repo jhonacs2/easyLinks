@@ -1,0 +1,17 @@
+<div class="el-create-link__phone-container">
+  <figure class="el-create-link__phone-img">
+    <img src="assets/images/illustration-phone-mockup.svg" alt="illustration phone mockup">
+        <div class="el-create-link__phone-links-container">
+          @for (phoneLink of phoneLinks | slice:0:5; track phoneLink) {
+            <div class="el-create-link__phone-links el-fw-400"
+                 [style.background-color]="phoneLink.background">
+              <div class="el-flex el-flex-gap-1">
+                <span class="{{phoneLink.icon}}"></span>
+                <label>{{ phoneLink.text }}</label>
+              </div>
+              <span class="el-link-icon-arrow-right"></span>
+            </div>
+          }
+        </div>
+  </figure>
+</div>
