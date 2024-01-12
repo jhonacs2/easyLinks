@@ -2,6 +2,10 @@
   display: flex;
   gap: 2.4rem;
 
+  &__phone-component {
+    width: 30%;
+  }
+
   &__customize {
     display: flex;
     flex-direction: column;

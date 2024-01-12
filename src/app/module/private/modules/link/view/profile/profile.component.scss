@@ -1,0 +1,41 @@
+.el-profile-container {
+  display: flex;
+  gap: 2.4rem;
+
+  &__phone-component {
+    width: 30%;
+  }
+
+  &__details {
+    width: 70%;
+    background: var(--white);
+    padding: 4rem;
+  }
+
+  &__title-details {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color-grey);
+  }
+
+  &__profile-picture {
+    padding: 2rem;
+  }
+
+  &__image-input {
+    background-color: var(--first-color-alt);
+    padding: 6rem 3.8rem;
+    border-radius: 1.2rem;
+    color: #633CFF;
+    cursor: pointer;
+
+    label {
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__icon-upload {
+    font-size: 4rem;
+  }
+}

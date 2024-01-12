@@ -81,10 +81,22 @@
   &-col {
     flex-direction: column;
   }
+
+  &-justify-content-center{
+    justify-content: space-between;
+  }
+
+  &-align-items-center{
+    align-items: center;
+  }
 }
 
 .el-flex-gap-1 {
   gap: 0.8rem;
+}
+
+.el-flex-al-center {
+  align-items: center;
 }
 
 /*FONT*/
@@ -108,3 +120,15 @@
   height: 90%;
 }
 
+.el-title-h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.el-fz-s {
+  font-size: 1.2rem;
+}
+
+.el-fz-m {
+  font-size: 1.6rem;
+}
