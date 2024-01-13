@@ -1,7 +1,7 @@
 <section class="el-profile-container el-h-100">
   <el-links-phone class="el-profile-container__phone-component"></el-links-phone>
 
-  <div class="el-profile-container__details">
+  <div class="el-profile-container__details el-h-100 el-flex el-flex-col">
     <div class="el-flex el-flex-col el-flex-gap-1">
       <h2 class="el-title-h1">Profile Details</h2>
       <label class="el-profile-container__title-details">
@@ -10,8 +10,9 @@
       </label>
     </div>
 
-    <div class="el-profile-container__profile-picture el-flex el-flex-justify-content-center el-flex-align-items-center">
-      <div>Profile Picture</div>
+    <div
+      class="el-profile-container__profile-picture el-flex el-flex-justify-content-center el-flex-align-items-center">
+      <div class="el-fz-m">Profile Picture</div>
 
       <div class="el-flex el-flex-col el-profile-container__image-input el-flex-align-items-center el-flex-gap-1"
            (click)="uploadImage(imageInput)">
@@ -20,15 +21,28 @@
         <input type="file" hidden #imageInput>
       </div>
 
-      <div>Image</div>
+      <div class="el-fz-m">Image</div>
+    </div>
+
+    <div class="el-profile-container__profile-details el-flex el-flex-col el-flex-gap-2">
+      <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <label for="first_name" class="el-fz-m">First Name*</label>
+        <input type="text" id="first_name" name="name" class="el-profile-container__input-form">
+      </div>
+
+      <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <label for="last_name" class="el-fz-m">Last Name*</label>
+        <input type="text" id="last_name" class="el-profile-container__input-form">
+      </div>
+
+      <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <label for="email" class="el-fz-m">Email</label>
+        <input type="text" id="email" class="el-profile-container__input-form">
+      </div>
     </div>
 
     <div>
-      Use Details
-    </div>
-
-    <div>
-      <button>Save</button>
+      <button class="el-button-sec">Save</button>
     </div>
   </div>
 </section>

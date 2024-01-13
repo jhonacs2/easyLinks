@@ -19,7 +19,10 @@
   }
 
   &__profile-picture {
+    margin-top: 4rem;
+    background-color: var(--body-background);
     padding: 2rem;
+    border-radius: 1.2rem;
   }
 
   &__image-input {
@@ -37,5 +40,18 @@
 
   &__icon-upload {
     font-size: 4rem;
+  }
+
+  &__profile-details {
+    width: 100%;
+    margin-top: 2.4rem;
+    background-color: var(--body-background);
+    padding: 2rem;
+    border-radius: 1.2rem;
+  }
+
+  &__input-form {
+    padding: 1.2rem 1.6rem;
+    width: 70%;
   }
 }
