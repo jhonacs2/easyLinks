@@ -12,6 +12,10 @@
   &:hover {
     background: var(--first-color-light);
   }
+
+  &:disabled{
+    opacity: 0.25;
+  }
 }
 
 .el-button-sec {
@@ -93,15 +97,19 @@
 .el-flex {
   display: flex;
 
+  &-row-reverse {
+    flex-direction: row-reverse;
+  }
+
   &-col {
     flex-direction: column;
   }
 
-  &-justify-content-center{
+  &-justify-content-center {
     justify-content: space-between;
   }
 
-  &-align-items-center{
+  &-align-items-center {
     align-items: center;
   }
 }

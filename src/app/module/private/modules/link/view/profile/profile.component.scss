@@ -40,7 +40,7 @@
     }
 
     &--active {
-     color: var(--white);
+      color: var(--white);
     }
   }
 
@@ -60,5 +60,10 @@
   &__input-form {
     padding: 1.2rem 1.6rem;
     width: 70%;
+  }
+
+  &__submit {
+    border-top: 2px solid var(--gray);
+    padding-top: 2.4rem;
   }
 }

@@ -5,7 +5,7 @@ import {LinkRoutingModule} from './routes/link-routing.module';
 import {MainLinkViewComponent} from './view/main-link-view/main-link-view.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {DropDownComponent} from '../../../../components/drop-down/drop-down.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LinksPhoneComponent} from './components/links-phone/links-phone.component';
 import {ProfileComponent} from './view/profile/profile.component';
 
@@ -20,14 +20,15 @@ import {ProfileComponent} from './view/profile/profile.component';
   exports: [
     LinksPhoneComponent
   ],
-  imports: [
-    CommonModule,
-    LinkRoutingModule,
-    NgOptimizedImage,
-    DragDropModule,
-    DropDownComponent,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        LinkRoutingModule,
+        NgOptimizedImage,
+        DragDropModule,
+        DropDownComponent,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class LinkModule {
 }
