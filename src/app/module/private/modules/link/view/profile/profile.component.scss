@@ -23,6 +23,7 @@
     background-color: var(--body-background);
     padding: 2rem;
     border-radius: 1.2rem;
+    color: var(--text-color-grey);
   }
 
   &__image-input {
@@ -31,10 +32,15 @@
     border-radius: 1.2rem;
     color: #633CFF;
     cursor: pointer;
+    background-size: contain;
 
     label {
       font-weight: 700;
       font-size: 1.6rem;
+    }
+
+    &--active {
+     color: var(--white);
     }
   }
 
@@ -48,6 +54,7 @@
     background-color: var(--body-background);
     padding: 2rem;
     border-radius: 1.2rem;
+    color: var(--text-color-grey);
   }
 
   &__input-form {

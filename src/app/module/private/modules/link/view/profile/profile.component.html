@@ -15,10 +15,14 @@
       <div class="el-fz-m">Profile Picture</div>
 
       <div class="el-flex el-flex-col el-profile-container__image-input el-flex-align-items-center el-flex-gap-1"
-           (click)="uploadImage(imageInput)">
+           (click)="uploadImage()" #containerImageInput>
         <span class="el-link-icon-upload-image el-profile-container__icon-upload"></span>
-        <label>+ Upload Image</label>
-        <input type="file" hidden #imageInput>
+        @if (!isImageUpload) {
+          <label>+ Upload Image</label>
+        } @else {
+          <label>Change Image</label>
+        }
+        <input type="file" accept="image/png, image/jpeg" hidden #imageInput (change)="loadImage()">
       </div>
 
       <div class="el-fz-m">Image</div>
@@ -27,22 +31,22 @@
     <div class="el-profile-container__profile-details el-flex el-flex-col el-flex-gap-2">
       <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
         <label for="first_name" class="el-fz-m">First Name*</label>
-        <input type="text" id="first_name" name="name" class="el-profile-container__input-form">
+        <input type="text" id="first_name" name="name" class="el-profile-container__input-form el-input">
       </div>
 
       <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
         <label for="last_name" class="el-fz-m">Last Name*</label>
-        <input type="text" id="last_name" class="el-profile-container__input-form">
+        <input type="text" id="last_name" class="el-profile-container__input-form el-input">
       </div>
 
       <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
         <label for="email" class="el-fz-m">Email</label>
-        <input type="text" id="email" class="el-profile-container__input-form">
+        <input type="text" id="email" class="el-profile-container__input-form el-input">
       </div>
     </div>
 
     <div>
-      <button class="el-button-sec">Save</button>
+      <button class="el-button">Save</button>
     </div>
   </div>
 </section>

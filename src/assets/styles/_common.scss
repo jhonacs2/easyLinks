@@ -1,4 +1,19 @@
 /*BUTTONS*/
+.el-button {
+  background: var(--first-color);
+  padding: 1.1rem 2.7rem;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background: var(--first-color-light);
+  }
+}
+
 .el-button-sec {
   background: none;
   padding: 1.1rem 2.7rem;
