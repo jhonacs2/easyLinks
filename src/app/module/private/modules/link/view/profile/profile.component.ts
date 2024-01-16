@@ -1,19 +1,24 @@
-import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, Renderer2, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Subject, takeUntil} from 'rxjs';
 
 @Component({
   selector: 'el-profile',
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
-export class ProfileComponent {
+export class ProfileComponent implements AfterViewInit, OnDestroy {
   @ViewChild('imageInput') public imageInput!: ElementRef<HTMLInputElement>;
   @ViewChild('containerImageInput') public containerImageInput!: ElementRef<HTMLDivElement>;
 
   isImageUpload: boolean;
   profileForm: FormGroup;
 
-  constructor(private _renderTwo: Renderer2, private _fb: FormBuilder) {
+  private _urlImage: string;
+  private _unsubscribe: Subject<void>;
+
+  constructor(private _renderTwo: Renderer2,
+              private _fb: FormBuilder) {
     this.isImageUpload = false;
     this.profileForm = this._fb.group({
       firstName: ['', Validators.required],
@@ -21,6 +26,17 @@ export class ProfileComponent {
       email: ['', [Validators.email, Validators.required]],
       image: [undefined, [Validators.required]]
     });
+    this._urlImage = '';
+    this._unsubscribe = new Subject<void>();
+  }
+
+  ngAfterViewInit(): void {
+    this._listenProfileFormValuesChanges();
+  }
+
+  ngOnDestroy() {
+    this._unsubscribe.next();
+    this._unsubscribe.complete();
   }
 
   uploadImage(): void {
@@ -29,8 +45,8 @@ export class ProfileComponent {
 
   loadImage(): void {
     if (this.imageInput.nativeElement.files!.length > 0) {
-      const urlImage = window.URL.createObjectURL(this.imageInput.nativeElement.files![0]);
-      this._setBackgroundImage(urlImage);
+      this._urlImage = window.URL.createObjectURL(this.imageInput.nativeElement.files![0]);
+      this._setBackgroundImage(this._urlImage);
       this._activeInputImage();
       this._setImageInputToForm();
       this.isImageUpload = true;
@@ -54,5 +70,11 @@ export class ProfileComponent {
     if (fileList && fileList.length > 0) {
       this.profileForm.get('image')?.setValue(fileList[0]);
     }
+  }
+
+  private _listenProfileFormValuesChanges(): void {
+    this.profileForm.valueChanges.pipe(takeUntil(this._unsubscribe)).subscribe(profileFormValue => {
+      console.log(profileFormValue);
+    });
   }
 }
