@@ -1,4 +1,15 @@
 .el-create-link {
+  &__profile-pic {
+    position: absolute;
+    top: 10%;
+    width: 38%;
+    height: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 9.6rem;
+  }
+
   &__profile-details {
     position: absolute;
     top: 26%;
@@ -13,7 +24,15 @@
     font-weight: 600;
     display: block;
     transform: translateY(100%);
-    background: var(--white)
+    background: var(--white);
+  }
+
+  &__email-label {
+    background: var(--white);
+    color: var(--text-color-grey);
+    font-size: 1.4rem;
+    display: block;
+    transform: translateY(200%);
   }
 
   &__phone-container {

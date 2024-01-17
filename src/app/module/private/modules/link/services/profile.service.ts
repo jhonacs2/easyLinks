@@ -1,17 +1,18 @@
-import {Injectable, signal, Signal} from '@angular/core';
+import {Injectable, signal, Signal, WritableSignal} from '@angular/core';
 import {ProfileDetails} from '../../../interfaces/profile-details.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  private _profileDetails: Signal<ProfileDetails>;
+  private _profileDetails: WritableSignal<ProfileDetails>;
 
   constructor() {
     this._profileDetails = signal({
       firstName: '',
       lastName: '',
-      email: ''
+      email: '',
+      image:undefined
     });
   }
 
@@ -19,7 +20,7 @@ export class ProfileService {
     return this._profileDetails;
   }
 
-  set profileDetails(value: Signal<ProfileDetails>) {
-    this._profileDetails = value;
+  setProfileDetails(profileDetails: ProfileDetails): void {
+    this._profileDetails.set(profileDetails);
   }
 }

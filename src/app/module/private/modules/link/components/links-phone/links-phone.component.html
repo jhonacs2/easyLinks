@@ -1,12 +1,23 @@
 <div class="el-create-link__phone-container">
   <figure class="el-create-link__phone-img">
     <img src="assets/images/illustration-phone-mockup.svg" alt="illustration phone mockup">
+
+    <div class="el-create-link__profile-pic">
+      @if(profileDetail().image){
+        <img [src]="profileDetail().image"
+             alt="profile pic">
+      }
+    </div>
+
     <div class="el-create-link__profile-details">
       <label class="el-create-link__profile-label">
         <span>{{ profileDetail().firstName | titlecase }} </span>
         <span>{{ profileDetail().lastName | titlecase }}</span>
       </label>
-      <label></label>
+
+      <label class="el-create-link__email-label">
+        {{ profileDetail().email }}
+      </label>
     </div>
     <div class="el-create-link__phone-links-container">
       @for (phoneLink of phoneLinks | slice:0:5; track phoneLink) {

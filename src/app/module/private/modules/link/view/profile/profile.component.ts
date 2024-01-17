@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, Renderer2, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Subject, takeUntil} from 'rxjs';
+import {ProfileService} from '../../services/profile.service';
 
 @Component({
   selector: 'el-profile',
@@ -17,7 +18,8 @@ export class ProfileComponent implements AfterViewInit, OnDestroy {
   private _urlImage: string;
   private _unsubscribe: Subject<void>;
 
-  constructor(private _renderTwo: Renderer2,
+  constructor(private _profileService: ProfileService,
+              private _renderTwo: Renderer2,
               private _fb: FormBuilder) {
     this.isImageUpload = false;
     this.profileForm = this._fb.group({
@@ -73,8 +75,10 @@ export class ProfileComponent implements AfterViewInit, OnDestroy {
   }
 
   private _listenProfileFormValuesChanges(): void {
-    this.profileForm.valueChanges.pipe(takeUntil(this._unsubscribe)).subscribe(profileFormValue => {
-      console.log(profileFormValue);
-    });
+    this.profileForm.valueChanges.pipe(takeUntil(this._unsubscribe))
+      .subscribe(profileFormValue => this._profileService.setProfileDetails({
+        ...profileFormValue,
+        image: this._urlImage
+      }));
   }
 }
