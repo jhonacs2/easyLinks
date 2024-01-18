@@ -38,7 +38,6 @@ export class LinkService {
     this._createOptionLinkDictionary();
   }
 
-
   get options(): Option[] {
     return this._options;
   }

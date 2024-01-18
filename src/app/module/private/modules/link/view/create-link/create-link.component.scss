@@ -25,7 +25,6 @@
   }
 
   &__main-links {
-    overflow-y: auto;
     padding: 4rem;
     display: flex;
     flex-direction: column;
@@ -62,6 +61,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    overflow: auto;
+    flex: 1 1 1px;
 
     &-link {
       button {
