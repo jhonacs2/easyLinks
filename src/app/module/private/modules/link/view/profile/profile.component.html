@@ -12,7 +12,7 @@
 
     <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
       <div
-        class="el-profile-container__profile-picture el-flex el-flex-justify-content-center el-flex-align-items-center">
+        class="el-profile-container__profile-picture el-flex el-flex-justify-content-sb el-flex-align-items-center">
         <div class="el-fz-m">Profile Picture</div>
 
         <div class="el-flex el-flex-col el-profile-container__image-input el-flex-align-items-center el-flex-gap-1"
@@ -30,7 +30,7 @@
       </div>
 
       <div class="el-profile-container__profile-details el-flex el-flex-col el-flex-gap-2">
-        <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <div class="el-flex el-flex-align-items-center el-flex-justify-content-sb">
           <label for="first_name" class="el-fz-m">First Name*</label>
           <input
             type="text"
@@ -41,7 +41,7 @@
           >
         </div>
 
-        <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <div class="el-flex el-flex-align-items-center el-flex-justify-content-sb">
           <label for="last_name" class="el-fz-m">Last Name*</label>
           <input type="text"
                  id="last_name"
@@ -49,7 +49,7 @@
                  formControlName="lastName">
         </div>
 
-        <div class="el-flex el-flex-align-items-center el-flex-justify-content-center">
+        <div class="el-flex el-flex-align-items-center el-flex-justify-content-sb">
           <label for="email" class="el-fz-m">Email</label>
           <input type="text"
                  id="email"

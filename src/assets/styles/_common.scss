@@ -27,6 +27,7 @@
   border: 1px solid var(--first-color);
   cursor: pointer;
   transition: background-color 0.5s;
+  text-decoration: none;
 
   &:hover {
     background: var(--first-color-alt);
@@ -105,8 +106,12 @@
     flex-direction: column;
   }
 
-  &-justify-content-center {
+  &-justify-content-sb {
     justify-content: space-between;
+  }
+
+  &-justify-content-center {
+    justify-content: center;
   }
 
   &-align-items-center {
@@ -162,4 +167,8 @@
 
 .el-fz-m {
   font-size: 1.6rem;
+}
+
+.el-text-center{
+  text-align: center;
 }

@@ -8,6 +8,7 @@ import {DropDownComponent} from '../../../../components/drop-down/drop-down.comp
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LinksPhoneComponent} from './components/links-phone/links-phone.component';
 import {ProfileComponent} from './view/profile/profile.component';
+import { PreviewLinkComponent } from './view/preview-link/preview-link.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {ProfileComponent} from './view/profile/profile.component';
     CreateLinkComponent,
     MainLinkViewComponent,
     LinksPhoneComponent,
-    ProfileComponent
+    ProfileComponent,
+    PreviewLinkComponent
   ],
   exports: [
     LinksPhoneComponent
