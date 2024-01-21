@@ -1,16 +1,19 @@
 <header class="el-container el-container__header">
   <nav class="el-nav">
-    <a href="#" class="el-nav__logo">
-      <img src="assets/images/logo-devlinks-large.svg" alt="logo">
-    </a>
-
-    <div class="el-nav__menu">
-      <a class="el-nav__link" routerLink="link/create" routerLinkActive="el-nav__link--active">Links</a>
-      <a class="el-nav__link" routerLink="link/profile" routerLinkActive="el-nav__link--active">Profile Details</a>
-    </div>
-
-    <div>
-      <a class="el-button-sec" routerLink="link/preview">Preview</a>
-    </div>
+    @if (isPreviewViewActive) {
+      <a routerLink="link/create" class="el-button-sec" (click)="changeToPreviewView(false)">Back To Editor</a>
+      <button class="el-button">Share Link</button>
+    } @else {
+      <a href="#" class="el-nav__logo">
+        <img src="assets/images/logo-devlinks-large.svg" alt="logo">
+      </a>
+      <div class="el-nav__menu">
+        <a class="el-nav__link" routerLink="link/create" routerLinkActive="el-nav__link--active">Links</a>
+        <a class="el-nav__link" routerLink="link/profile" routerLinkActive="el-nav__link--active">Profile Details</a>
+      </div>
+      <div>
+        <a class="el-button-sec" routerLink="link/preview" (click)="changeToPreviewView(true)">Preview</a>
+      </div>
+    }
   </nav>
 </header>

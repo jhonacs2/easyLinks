@@ -12,5 +12,13 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isPreviewViewActive: boolean;
 
+  constructor() {
+    this.isPreviewViewActive = false;
+  }
+
+  changeToPreviewView(isPreviewActive: boolean): void {
+    this.isPreviewViewActive = isPreviewActive;
+  }
 }

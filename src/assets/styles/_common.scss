@@ -8,12 +8,14 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.5s;
+  font-size: 1.6rem;
+  font-family: inherit;
 
   &:hover {
     background: var(--first-color-light);
   }
 
-  &:disabled{
+  &:disabled {
     opacity: 0.25;
   }
 }
@@ -28,6 +30,8 @@
   cursor: pointer;
   transition: background-color 0.5s;
   text-decoration: none;
+  font-size: 1.6rem;
+  font-family: inherit;
 
   &:hover {
     background: var(--first-color-alt);
@@ -177,6 +181,6 @@
   font-size: 1.6rem;
 }
 
-.el-text-center{
+.el-text-center {
   text-align: center;
 }
