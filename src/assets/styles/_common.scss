@@ -117,6 +117,10 @@
   &-align-items-center {
     align-items: center;
   }
+
+  &-align-items-end {
+    align-items: flex-end;
+  }
 }
 
 .el-flex-gap-1 {
@@ -125,6 +129,10 @@
 
 .el-flex-gap-2 {
   gap: 1.2rem;
+}
+
+.el-flex-gap-10 {
+  gap: 5.6rem;
 }
 
 .el-flex-al-center {

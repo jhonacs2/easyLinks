@@ -61,6 +61,7 @@ export class LinkService {
       background: this.optionMap.get(link.text)?.background,
       icon: this.optionMap.get(link.text)?.icon
     });
+    console.log(this._phoneLinks);
   }
 
   changeOrderLinks(links: LinkDetail[]): void {

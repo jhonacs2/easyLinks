@@ -1,20 +1,30 @@
 <section class="el-preview-link el-flex el-flex-align-items-center el-flex-justify-content-center">
-  <div class="el-preview-link__card el-flex el-flex-align-items-center el-flex-col">
+  <div class="el-preview-link__card el-flex el-flex-align-items-center el-flex-col el-flex-gap-10">
     <div class="el-flex el-flex-col el-flex-align-items-center el-flex-gap-1">
       <figure class="el-preview-link__profile-pic">
-        <img src="https://wallpapers.com/images/hd/cool-profile-picture-awled9dwo4qq2yv2.jpg"
-             alt="profile pic" class="el-w-100 el-h-100">
+        @if(profileDetail().image){
+          <img [src]="profileDetail().image"
+               alt="profile pic" class="el-w-100 el-h-100">
+        }
       </figure>
 
       <div class="el-flex el-flex-col el-text-center el-preview-link__profile-details el-flex-gap-1">
-        <label class="el-fw-700">Jhonatan Soto</label>
-        <label class="el-fz-m">aa.com</label>
+        <label class="el-fw-700">{{profileDetail().firstName}} {{profileDetail().lastName}}</label>
+        <label class="el-fz-m">{{ profileDetail().email }}</label>
       </div>
     </div>
 
-<!--    TODO: INSERT LINKS-->
-<!--    <div>-->
-<!--      links-->
-<!--    </div>-->
+    <div class="el-preview-link__card-body">
+      @for (phoneLink of phoneLinks | slice:0:5; track phoneLink) {
+        <div class="el-preview-link__card-link el-fw-400 el-flex-align-items-end"
+             [style.background-color]="phoneLink.background">
+          <div class="el-flex el-flex-gap-1 el-flex-al-center">
+            <span class="{{phoneLink.icon}} el-fz-m"></span>
+            <label>{{ phoneLink.text }}</label>
+          </div>
+          <span class="el-link-icon-arrow-right"></span>
+        </div>
+      }
+    </div>
   </div>
 </section>
