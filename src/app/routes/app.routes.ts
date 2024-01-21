@@ -6,8 +6,12 @@ export const routes: Routes = [
     loadChildren: () => import('../module/private/private.module').then(m => m.PrivateModule)
   },
   {
+    path: 'public',
+    loadChildren: () => import('../module/public/public.module').then(m => m.PublicModule)
+  },
+  {
     path: '',
-    redirectTo: 'secure',
+    redirectTo: 'public',
     pathMatch: 'full'
   }
 ];
