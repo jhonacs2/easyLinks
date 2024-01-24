@@ -1,29 +1,29 @@
-.el-login-container {
-  .el-login__form-container {
-    max-width: 47.6rem;
+.el-register-container {
+  .el-register__form-container {
     gap: 5.1rem;
     width: 100%;
+    max-width: 47.6rem;
   }
 
-  .el-login__form {
+  .el-register__form {
     background: var(--white);
     max-width: 47.6rem;
     padding: 4rem;
     width: 100%;
   }
 
-  .el-login__form-details {
+  .el-register__form-details {
     font-size: 1.6rem;
     color: var(--text-color-grey);
   }
 
-  .el-login__body {
+  .el-register__body {
     label {
       font-size: 1.2rem;
     }
   }
 
-  .el_login_text-create-account {
+  .el_register_text-create-account {
     font-size: 1.6rem;
     color: var(--text-color-grey);
 
