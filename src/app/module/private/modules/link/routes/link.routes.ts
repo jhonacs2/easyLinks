@@ -10,6 +10,11 @@ export const LINK_ROUTES: Routes = [
     component: MainLinkViewComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'create',
+        pathMatch: 'full'
+      },
+      {
         path: 'create',
         component: CreateLinkComponent
       },

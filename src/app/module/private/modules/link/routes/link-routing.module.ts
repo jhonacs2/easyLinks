@@ -8,7 +8,4 @@ import {LINK_ROUTES} from './link.routes';
   exports: [RouterModule]
 })
 export class LinkRoutingModule {
-
-  constructor() {
-  }
 }
